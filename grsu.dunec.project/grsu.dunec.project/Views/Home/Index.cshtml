@@ -1,5 +1,5 @@
-﻿using grsu.dunec.project.Models
-@model 
+﻿@using grsu.dunec.project.Models
+@model IList<Book>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -15,7 +15,7 @@
             <td><p>Год издания</p></td>
             <td><p>Рейтинг книги</p></td>
         </tr>
-        @foreach (var b in ViewBag.Books)
+        @foreach (var b in Model)
             {
             <tr>
                 <td><p>@b.name</p></td>

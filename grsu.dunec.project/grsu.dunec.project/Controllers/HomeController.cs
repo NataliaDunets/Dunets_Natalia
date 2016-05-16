@@ -16,15 +16,14 @@ namespace grsu.dunec.project.Controllers
 
         public ActionResult Index()
         {
-            IEnumerable<Book> books = db.Books;
-            return View(books.ToList());
+            var books = db.Books.ToList();
+            return View(books);
         }
 
         [HttpGet]
         public ActionResult Buy(int id)
         {
-            ViewBag.bookId = id;
-            return View();
+             return View(id);
         }
 
         [HttpPost]

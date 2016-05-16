@@ -1,11 +1,13 @@
-﻿@{
+﻿@using grsu.dunec.project.Models
+@model int
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
  
     <div>
         <h3>Форма оформления покупки</h3>
         <form method="post" action="">
-            <input type="hidden" value="@ViewBag.bookId" name="bookId" />
+            <input type="hidden" value="@Model" name="bookId" />
             <table>
                 <tr><td><p>Введите свое имя </p></td>
                     <td><input type="text" name="person" /> </td></tr>
