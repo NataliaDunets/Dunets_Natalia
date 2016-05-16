@@ -18,6 +18,7 @@ namespace grsu.dunec.project.Models
         public BookType type { get; set; }
         public int yearOfPublishing { get; set; }
         public double rating { get; set; }
+        public string description { get; set; }
 
     }
 }
